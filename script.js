@@ -1,28 +1,12 @@
-
-
-function strawberry(){
-    let s = document.createElement('p')
-    s.textContent = "There is a strawberry";
-    s.id = "added";
-    document.body.appendChild(s);
-    
+function openNavigationBar(){
+    navigationChoices.style.left = "0px";
+    navigationOverlay.style.display = "block";
 };
 
+function closeNavigationBar(){
+    navigationChoices.style.left = "-250px";
+    navigationOverlay.style.display = "none";
+}
 
-
-document.getElementById('creatingIceCream').addEventListener('submit',function(event){
-    event.preventDefault();
-    let checkedFlavors = document.querySelectorAll('input[name="flavor"]:checked');
-    let flavorValues = Array.from(checkedFlavors).map(f=>f.value);
-    alert(flavorValues.join(', '));
-    let erase = document.getElementById("added");
-    try{
-        erase.remove();
-    } catch{
-
-    };
-    if (flavorValues.includes('strawberry')){
-       strawberry(); 
-    };
-});
-
+document.getElementById('openNavigation').addEventListener('click',openNavigationBar);
+document.getElementById('navigationOverlay').addEventListener('click',closeNavigationBar);
