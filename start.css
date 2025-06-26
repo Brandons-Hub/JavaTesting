@@ -4,101 +4,114 @@ html, body{
 }
 
 body{
-    background-color: pink;
+    background-color: rgb(205, 180, 219);
 }
 
-html {
-    filter: brightness(1);
-    transition: .5s;
+#startButton h1 {
+    position: absolute;
+    top: 20px;
+    font-size: 90px;
+    font-family: "Shadows Into Light", cursive;
 }
 
-/*#actualStartButton{
-    border-radius: 50px;
-    font-size: 40px;
-    padding: 13px;
-    border-width: 3px 2px 5px 2px;
-    background-color: rgb(255, 255, 255, 0.50);
-    transition: 1s;
-}*/
+#startButton h2:hover {
+    animation: zoom 5s linear;
+}
 
+#startButton h2 {
+    position: absolute;
+    font-family: "Permanent Marker", cursive;
+    top: 250px;
+    font-size: 50px;
+    animation: bounce 1.5s infinite;
+    color: rgb(162, 210, 255);
+}
 
 #actualStartButton {
   transition: 0.3s;
-  box-shadow: 5px 5px 5px black;
-  text-shadow: 5px 5px 5px black;
+  box-shadow: 6px 6px 18px black;
+  text-shadow: 3px 2px 0px black;
   color: rgb(255 175 204);
   background-color: rgb(162 210 255);
-  animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce{
-    0%,50%, 100%{
-        transform: scale(1.2);
-        box-shadow: 0 12px 30px black;
-    }
-    25%{
-        transform: rotateZ(10deg);
-        box-shadow: 0 2px 5px black;
-    }
-    75%{
-        transform: rotateZ(-10deg);
-        box-shadow: 0 2px 5px black;
-    }
-}
-
-#actualStartButton:hover{
-  color: black;
-  background-color: white;
-  animation: zoom 10s linear;
-}
-
-@keyframes zoom{
-    0%{
-        transform: scale(1);
-    }
-    10%{
-        transform: scale(1.2);
-    }
-    20%{
-        transform: scale(1.4);
-    }
-    30%{
-        transform: scale(1.6);
-    }
-    40%{
-        transform: scale(1.8);
-    }
-    50%{
-        transform: scale(2);
-    }
-    60%{
-        transform: scale(2.2);
-    }
-    70%{
-        transform: scale(2.4);
-    }
-    80%{
-        transform: scale(2.6);
-    }
-    90%{
-        transform: scale(2.8);
-    }
-    100%{
-        transform: scale(3);
-    }
-}
-
-#actualStartButton {
+  transform:perspective(500px) rotateY(-20deg);
   font-size: 50px;
   margin: 0;
   cursor: pointer;
   padding: 5px 40px;
   font-family: fantasy;
+  position: absolute;
+  top: 480px;
 }
 
-/*#actualStartButton:hover{
-    background-color: white;
-}*/
+@keyframes bounce{
+    0%,50%, 100%{
+        transform: scale(1.2);
+        text-shadow: 0 12px 35px black;
+    }
+    25%{
+        transform: rotateZ(10deg);
+        text-shadow: 0 2px 10px black;
+    }
+    75%{
+        transform: rotateZ(-10deg);
+        text-shadow: 0 2px 10px black;
+    }
+}
+
+#actualStartButton:hover{
+  /*color: black;
+  background-color: white;*/
+  transform:perspective(500px) rotateY(20deg);
+  box-shadow: -6px 6px 18px black;
+  text-shadow: -3px 2px 0px black;
+}
+
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+        text-shadow: 0 2px 5px black;
+    }
+    10%{
+        transform: scale(1.2);
+        text-shadow: 0 2px 5px black;
+    }
+    20%{
+        transform: scale(1.4);
+        text-shadow: 0 2px 5px black;
+    }
+    30%{
+        transform: scale(1.6);
+        text-shadow: 0 2px 5px black;
+    }
+    40%{
+        transform: scale(1.8);
+        text-shadow: 0 2px 5px black;
+    }
+    50%{
+        transform: scale(2);
+        text-shadow: 0 2px 5px black;
+    }
+    60%{
+        transform: scale(2.2);
+        text-shadow: 0 2px 5px black;
+    }
+    70%{
+        transform: scale(2.4);
+        text-shadow: 0 2px 5px black;
+    }
+    80%{
+        transform: scale(2.6);
+        text-shadow: 0 2px 5px black;
+    }
+    90%{
+        transform: scale(2.8);
+        text-shadow: 0 2px 5px black;
+    }
+    100%{
+        transform: scale(3);
+        text-shadow: 0 2px 5px black;
+    }
+}
 
 #startButton {
     display: flex;
