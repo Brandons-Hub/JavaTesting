@@ -27,6 +27,38 @@ body{
     color: rgb(162, 210, 255);
 }
 
+#cookingMama{
+    position: fixed;
+    top: 420px;
+    right: 0px;
+    height: 600px;
+    animation: periodicZoom 2.5s infinite;
+}
+
+#cupcake{
+    position: fixed;
+    height: 190px;
+    animation: smallBobbing 3s infinite;
+    top: 80px;
+    right: 60px;
+}
+
+#icecream{
+    position: fixed;
+    height: 360px;
+    top: 100px;
+    left: -70px;
+    animation: smallBobbing 3.2s infinite;
+}
+
+#pizza{
+    position: fixed;
+    height: 230px;
+    top: 600px;
+    left: 35px;
+    animation: periodicZoom 2.5s infinite;
+}
+
 #actualStartButton {
   transition: 0.3s;
   box-shadow: 6px 6px 18px black;
@@ -41,6 +73,27 @@ body{
   font-family: fantasy;
   position: absolute;
   top: 480px;
+}
+
+@keyframes smallBobbing{
+    0%,50%, 100%{
+        transform: none;
+    }
+    25%{
+        transform: rotateZ(10deg);
+    }
+    75%{
+        transform: rotateZ(-10deg);
+    }
+}
+
+@keyframes periodicZoom{
+    0%,100%{
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 @keyframes bounce{
@@ -146,10 +199,15 @@ body{
     flex-direction: column;
     height: 60%;
     width: 60%;
+    
 }
 
 #startingChoices h1{
-    font-size:50px
+    font-size: 50px;
+    text-decoration: underline;
+    font-weight: bolder;
+    color: rgb(162, 210, 255);
+    text-shadow: 2px 3px 9px black;
 }
 
 #startingChoices a{
@@ -161,12 +219,14 @@ body{
     border-radius: 50px;
     border-color: black;
     border-width: 3px;
-    color: black;
-    background-color: rgb(255,255,255,0.25);
+    color: white;
+    background-color: rgb(189, 224, 254, 0.50);
     transition: 0.5s;
+    text-shadow: 2px 2px 6px black;
 }
 
 #startingChoices a:hover{
-    background-color: white;
+    background-color: rgb(205, 180, 219);
+    color: rgb(162, 210, 255);
 }
 
